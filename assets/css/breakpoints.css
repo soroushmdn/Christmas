@@ -265,3 +265,22 @@
     top: 10rem;
   }
 }
+
+@media (max-height: 370px) {
+  .home {
+    margin-top: 1.5rem;
+  }
+  
+  .home__img {
+    width: 200px;
+  }
+
+  .home__title {
+    font-size: 1.6rem;
+  }
+
+  .home__description {
+    margin-bottom: var(--mb-1);
+  }
+}
+
