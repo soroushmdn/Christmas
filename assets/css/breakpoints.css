@@ -1,0 +1,267 @@
+@media (max-width: 992px) {
+  /* @@@@@@@@@@@@@@@@@@ home @@@@@@@@@@@@@@@@@ */
+  .home__container {
+    gap: 1rem;
+  }
+
+  .home__title {
+    font-size: 2rem;
+  }
+
+  .home__description {
+    width: 100%;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ giving @@@@@@@@@@@@@@@@@ */
+  .giving__container {
+    gap: 2rem;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ celebrate @@@@@@@@@@@@@@@@@ */
+  .celebrate__container {
+    gap: 1rem;
+  }
+
+  .celebrate__description {
+    padding-right: 0;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ message @@@@@@@@@@@@@@@@@ */
+
+  .message .container {
+    padding: 3rem 0;
+  }
+
+  .message__container {
+    gap: 10rem;
+  }
+
+  .message__form {
+    text-align: center;
+  }
+
+  .message__input {
+    width: 100%;
+    display: block;
+  }
+  .message__btn {
+    width: 100%;
+  }
+
+  .message__img {
+    width: 200px;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@@@ */
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: unset;
+    row-gap: 3rem;
+  }
+
+  .footer__title {
+    margin-bottom: var(--mb-1-5);
+  }
+
+  .footer__img-right {
+    top: unset;
+    right: -5rem;
+    bottom: -5rem;
+  }
+
+  .footer__img-left {
+    left: unset;
+    bottom: unset;
+    right: 0;
+    top: 3rem;
+  }
+
+  .footer__copy {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 765px) {
+  .nav__toggle,
+  .nav__close {
+    display: flex;
+    color: var(--title-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--container-color);
+    transition: 0.4s;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__list {
+    text-align: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .nav__link {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  .nav__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .nav__corner {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 150px;
+    transform: rotate(-30deg);
+  }
+
+  .show-menu {
+    right: 0;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ home @@@@@@@@@@@@@@@@@ */
+  .home__container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding: 0;
+  }
+
+  .home__img {
+    width: 330px;
+    justify-self: center;
+  }
+
+  .home__data {
+    text-align: center;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ giving @@@@@@@@@@@@@@@@@ */
+  .giving__container {
+    grid-template-columns: repeat(2, 200px);
+    gap: 2rem;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ celebrate @@@@@@@@@@@@@@@@@ */
+  .celebrate__container {
+    grid-template-columns: 1fr;
+  }
+
+  .celebrate__data {
+    text-align: center;
+  }
+
+  .celebrate__description {
+    padding: 0 3rem;
+  }
+
+  .celebrate__img {
+    width: 300px;
+    justify-self: center;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ gift @@@@@@@@@@@@@@@@@ */
+  .gift__container {
+    grid-template-columns: repeat(2, 180px);
+    gap: 2rem;
+  }
+
+  .gift__card {
+    padding: 1rem;
+  }
+
+  .gift__img {
+    width: 100px;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ message @@@@@@@@@@@@@@@@@ */
+
+  .message__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .message__input {
+    width: 60%;
+    display: unset;
+  }
+  .message__btn {
+    width: 60%;
+  }
+
+  .message__img {
+    justify-self: center;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@@@ */
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  /* @@@@@@@@@@@@@@@@@@ giving @@@@@@@@@@@@@@@@@ */
+  .giving__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .giving__description {
+    padding: 0;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ celebrate @@@@@@@@@@@@@@@@@ */
+
+  .celebrate__description {
+    padding: 0;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ gift @@@@@@@@@@@@@@@@@ */
+  .gift__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gift__img {
+    margin-bottom: 0;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ message @@@@@@@@@@@@@@@@@ */
+
+  .message .container {
+    padding: 3rem 2rem;
+  }
+  .message__input {
+    width: 100%;
+  }
+  .message__btn {
+    width: 100%;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@@@ */
+
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__img-left {
+    top: 10rem;
+  }
+}

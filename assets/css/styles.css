@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+/* @@@@@@@@@@@@@@@@@@ variables @@@@@@@@@@@@@@@@@ */
+:root {
+  --header-height: 4rem;
+
+  --first-color: hsl(355, 70%, 54%);
+  --first-color-dark: hsl(355, 70%, 40%);
+  --body-color: hsl(355, 20%, 12%);
+  --container-color: hsl(355, 20%, 16%);
+  --title-color: hsl(355, 0%, 95%);
+  --text-color: hsl(355, 0%, 75%);
+
+  --body-font: 'Rubik', sans-serif;
+  --h1-font-size: 2.4rem;
+  --h2-font-size: 1.8rem;
+  --h3-font-size: 1.4rem;
+  --normal-font-size: 1.1rem;
+  --small-font-size: 0.95rem;
+  --tiny-font-size: 0.7rem;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+}
+
+@media (max-width: 992px) {
+  :root {
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.4rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.85rem;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@ base @@@@@@@@@@@@@@@@@ */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* @@@@@@@@@@@@@@@@@@ reusable CSS classes @@@@@@@@@@@@@@@@@ */
+.section {
+  padding: 5rem 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 1.2rem 2.6rem;
+  border-radius: 2rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--first-color-dark);
+}
+
+/* @@@@@@@@@@@@@@@@@@ header @@@@@@@@@@@@@@@@@ */
+.nav__toggle,
+.nav__close,
+.nav__corner {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.nav__logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.nav__logo:hover {
+  color: var(--first-color);
+}
+
+.nav__list {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+
+  position: relative;
+}
+
+.nav__link::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -10px;
+
+  content: '';
+  background-color: var(--first-color);
+  width: 0;
+  height: 2px;
+  transition: 0.3s;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.scroll-header {
+  box-shadow: 0 2px 2px hsla(355, 5%, 5%, 0.5);
+}
+
+/* @@@@@@@@@@@@@@@@@@ home @@@@@@@@@@@@@@@@@ */
+.home__container {
+  padding: 10rem 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+.home__title {
+  font-size: 2.7rem;
+  margin-bottom: var(--mb-1);
+  line-height: 1.3;
+}
+
+.home__description {
+  margin-bottom: var(--mb-2);
+  line-height: 1.5;
+  width: 70%;
+}
+
+/* @@@@@@@@@@@@@@@@@@ giving @@@@@@@@@@@@@@@@@ */
+.giving__container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  gap: 4rem;
+}
+
+.giving__content {
+  text-align: center;
+}
+
+.giving__content:hover .giving__img {
+  transform: translateY(-10px);
+}
+
+.giving__img {
+  width: 120px;
+  transition: 0.3s;
+}
+
+.giving__title {
+  margin-bottom: var(--mb-0-5);
+  font-size: var(--h3-font-size);
+}
+
+.giving__description {
+  padding: 0 1.5rem;
+  line-height: 1.5;
+  font-size: var(--small-font-size);
+}
+
+/* @@@@@@@@@@@@@@@@@@ celebrate @@@@@@@@@@@@@@@@@ */
+.celebrate__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.celebrate__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-1);
+  line-height: 1.3;
+}
+
+.celebrate__description {
+  margin-bottom: var(--mb-2);
+  line-height: 1.5;
+  padding-right: 5rem;
+}
+
+/* @@@@@@@@@@@@@@@@@@ gift @@@@@@@@@@@@@@@@@ */
+.gift__container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.gift__card {
+  position: relative;
+  display: grid;
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+
+  box-shadow: 0 0 3px hsla(355, 5%, 5%, 0.5);
+}
+
+.gift__card:hover .gift__img {
+  transform: translateY(-10px);
+}
+
+.gift__icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.1rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.gift__img {
+  width: 120px;
+  justify-self: center;
+  margin-bottom: var(--mb-1);
+  transition: 0.3s;
+}
+
+.gift__price {
+  margin-bottom: 0.25rem;
+}
+
+.gift__description {
+  font-size: var(--small-font-size);
+}
+
+/* @@@@@@@@@@@@@@@@@@ new @@@@@@@@@@@@@@@@@ */
+.swiper {
+  max-width: 992px;
+}
+
+.swiper-wrapper {
+  margin-bottom: 4rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--first-color);
+}
+
+.new__card {
+  position: relative;
+  width: 230px;
+  overflow: hidden;
+  background-color: var(--container-color);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+}
+
+.new__card:hover .new__img {
+  transform: translateY(-10px);
+}
+
+.new__overlay {
+  position: absolute;
+  top: -5rem;
+  left: -0.6rem;
+  width: 250px;
+  height: 250px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  z-index: 0;
+}
+.new__img {
+  width: 150px;
+  margin-bottom: var(--mb-2);
+  transition: 0.3s;
+
+  position: relative;
+  z-index: 1;
+}
+
+.new__price {
+  margin-bottom: var(--mb-0-5);
+  font-size: var(--h3-font-size);
+}
+
+.new__description {
+  font-weight: var(--font-medium);
+}
+
+.new__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-flex;
+
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+}
+
+/* @@@@@@@@@@@@@@@@@@ message @@@@@@@@@@@@@@@@@ */
+
+.message .container {
+  background-color: var(--container-color);
+  border-radius: 1rem;
+  padding: 4rem 0;
+}
+
+.message__container {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+
+  align-items: center;
+  justify-content: center;
+}
+
+.message__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.3;
+}
+
+.message__input {
+  width: 70%;
+  margin-bottom: var(--mb-1);
+  background-color: transparent;
+  background-color: var(--body-color);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+}
+
+.message__img {
+  width: 350px;
+  transform: rotate(15deg);
+}
+
+/* @@@@@@@@@@@@@@@@@@ footer @@@@@@@@@@@@@@@@@ */
+
+.footer {
+  overflow: hidden;
+}
+
+.footer__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  transition: 0.4s;
+  margin-bottom: 1.7rem;
+}
+
+.footer__logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__logo:hover {
+  color: var(--first-color);
+}
+
+.footer__description {
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+}
+
+.footer__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.footer__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__link {
+  display: block;
+  width: max-content;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  transition: 0.4s;
+}
+
+.footer__link:hover {
+  transform: translateX(-10px);
+}
+
+.footer__button-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__button {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  border-radius: 0.2rem;
+  padding: 0.4rem 0.2rem;
+  transition: 0.3s;
+  width: 110px;
+}
+
+.footer__button:hover {
+  background-color: var(--first-color-dark);
+}
+
+.footer__button-icon {
+  font-size: 1.5rem;
+}
+
+.footer__button-title,
+.footer__button-subtitle {
+  display: block;
+  text-align: start;
+}
+
+.footer__button-subtitle {
+  font-size: 0.5rem;
+}
+
+.footer__button-title {
+  font-size: 0.8rem;
+}
+
+.footer__copy {
+  margin-top: 8rem;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.footer__copy a {
+  color: var(--first-color);
+}
+
+.footer__img-right,
+.footer__img-left {
+  display: block;
+  width: 120px;
+  position: absolute;
+}
+
+.footer__img-right {
+  right: -7rem;
+  top: 5rem;
+}
+
+.footer__img-left {
+  left: 0;
+  bottom: -8rem;
+}
+
+/* @@@@@@@@@@@@@@@@@@ scroll up @@@@@@@@@@@@@@@@@ */
+.scrollup {
+  display: inline-flex;
+  background-color: var(--container-color);
+  color: var(--first-color);
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  opacity: 0.7;
+  transition: 0.3s;
+
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  z-index: 100;
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+.show-scrollup {
+  bottom: 5rem;
+}
+
+/* @@@@@@@@@@@@@@@@@@ scroll bar @@@@@@@@@@@@@@@@@ */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: hsl(355, 20%, 24%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(355, 40%, 24%);
+  border-radius: 1rem;
+}
