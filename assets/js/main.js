@@ -22,8 +22,6 @@ navLinks.forEach((n) => {
   });
 });
 
-// .scroll-header
-
 // @@@@@@@@@@@@@@@@ add boxshadow to header  @@@@@@@@@@@@@@@@@
 
 window.addEventListener('scroll', scrollHeader);
