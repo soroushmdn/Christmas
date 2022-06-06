@@ -266,7 +266,7 @@
   }
 }
 
-@media (max-height: 370px) {
+@media (max-width: 370px) {
   .home {
     margin-top: 1.5rem;
   }
