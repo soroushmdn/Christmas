@@ -1,3 +1,12 @@
+//  @@@@@@@@@@@@@@@@@@ PRELOADER @@@@@@@@@@@@@@@@@@
+onload = () => {
+  const preloader = document.getElementById('preloader');
+
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 3000);
+};
+
 // @@@@@@@@@@@@@@@@ show & remove navmenu @@@@@@@@@@@@@@@@@
 
 const navMenu = document.getElementById('nav-menu'),
@@ -39,7 +48,7 @@ function scrollHeader() {
 // @@@@@@@@@@@@@@@@ swiperjs.com  @@@@@@@@@@@@@@@@@
 
 const swiper = new Swiper('.swiper', {
-  spaceBetween: 25,
+  spaceBetween: 26,
   loop: 'true',
   slidesPerView: 'auto',
   centeredSlides: true,
@@ -56,7 +65,7 @@ const swiper = new Swiper('.swiper', {
 
   breakpoints: {
     992: {
-      spaceBetween: 80,
+      spaceBetween: 60,
     },
   },
 });
