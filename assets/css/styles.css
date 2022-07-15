@@ -82,15 +82,22 @@ input,
 button {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-}
-
-button {
-  cursor: pointer;
   border: none;
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* @@@@@@@@@@@@@@@@@@ reusable CSS classes @@@@@@@@@@@@@@@@@ */
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+}
+
 .section {
   padding: 5rem 0 2rem;
 }
@@ -100,12 +107,6 @@ button {
   font-size: var(--h2-font-size);
   color: var(--title-color);
   margin-bottom: var(--mb-3);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: calc(100% - 3rem);
 }
 
 .btn {
@@ -123,6 +124,7 @@ button {
 }
 
 /* @@@@@@@@@@@@@@@@@@ header @@@@@@@@@@@@@@@@@ */
+
 .nav__toggle,
 .nav__close,
 .nav__corner {
@@ -169,7 +171,7 @@ button {
 
 .nav__list {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .nav__link {
@@ -199,16 +201,17 @@ button {
 }
 
 .scroll-header {
-  box-shadow: 0 2px 2px hsla(355, 5%, 5%, 0.5);
+  box-shadow: 0 1px 2px hsl(355, 5%, 10%);
 }
 
 /* @@@@@@@@@@@@@@@@@@ home @@@@@@@@@@@@@@@@@ */
+
 .home__container {
   padding: 10rem 0 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .home__title {
@@ -224,6 +227,7 @@ button {
 }
 
 /* @@@@@@@@@@@@@@@@@@ giving @@@@@@@@@@@@@@@@@ */
+
 .giving__container {
   display: grid;
   grid-template-columns: repeat(3, 200px);
@@ -233,10 +237,6 @@ button {
 
 .giving__content {
   text-align: center;
-}
-
-.giving__content:hover .giving__img {
-  transform: translateY(-10px);
 }
 
 .giving__img {
@@ -255,12 +255,17 @@ button {
   font-size: var(--small-font-size);
 }
 
+.giving__content:hover .giving__img {
+  transform: translateY(-10px);
+}
+
 /* @@@@@@@@@@@@@@@@@@ celebrate @@@@@@@@@@@@@@@@@ */
+
 .celebrate__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .celebrate__title {
@@ -276,6 +281,7 @@ button {
 }
 
 /* @@@@@@@@@@@@@@@@@@ gift @@@@@@@@@@@@@@@@@ */
+
 .gift__container {
   display: grid;
   grid-template-columns: repeat(3, 200px);
@@ -289,12 +295,7 @@ button {
   background-color: var(--container-color);
   border-radius: 1rem;
   padding: 1.5rem;
-
-  box-shadow: 0 0 3px hsla(355, 5%, 5%, 0.5);
-}
-
-.gift__card:hover .gift__img {
-  transform: translateY(-10px);
+  box-shadow: 0 0 3px hsl(355, 5%, 10%);
 }
 
 .gift__icon {
@@ -321,9 +322,14 @@ button {
   font-size: var(--small-font-size);
 }
 
+.gift__card:hover .gift__img {
+  transform: translateY(-10px);
+}
+
 /* @@@@@@@@@@@@@@@@@@ new @@@@@@@@@@@@@@@@@ */
+
 .swiper {
-  max-width: 992px;
+  max-width: 900px;
 }
 
 .swiper-wrapper {
@@ -342,22 +348,21 @@ button {
   border-radius: 0.75rem;
   text-align: center;
   padding: 1rem 1rem 2rem;
-}
-
-.new__card:hover .new__img {
-  transform: translateY(-10px);
+  margin: 0 auto;
 }
 
 .new__overlay {
+  background-color: var(--first-color);
   position: absolute;
   top: -5rem;
   left: -0.6rem;
   width: 250px;
   height: 250px;
-  background-color: var(--first-color);
   border-radius: 50%;
+
   z-index: 0;
 }
+
 .new__img {
   width: 150px;
   margin-bottom: var(--mb-2);
@@ -384,9 +389,13 @@ button {
 
   background-color: var(--first-color);
   color: var(--title-color);
-  padding: 0.6rem;
-  font-size: 1.2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
   border-radius: 0.3rem;
+}
+
+.new__card:hover .new__img {
+  transform: translateY(-10px);
 }
 
 /* @@@@@@@@@@@@@@@@@@ message @@@@@@@@@@@@@@@@@ */
@@ -419,8 +428,6 @@ button {
   padding: 1.2rem;
   border-radius: 2rem;
   color: var(--text-color);
-  border: none;
-  outline: none;
 }
 
 .message__img {
@@ -450,13 +457,13 @@ button {
   font-weight: var(--font-semi-bold);
   font-size: var(--h3-font-size);
   text-transform: uppercase;
-  transition: 0.4s;
   margin-bottom: 1.7rem;
+  transition: 0.4s;
 }
 
 .footer__logo img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 .footer__logo:hover {
@@ -492,6 +499,7 @@ button {
 
 .footer__button-container {
   display: grid;
+  grid-template-columns: max-content;
   gap: 1rem;
 }
 
@@ -502,9 +510,8 @@ button {
   background-color: var(--first-color);
   color: var(--title-color);
   border-radius: 0.2rem;
-  padding: 0.4rem 0.2rem;
+  padding: 0.5rem;
   transition: 0.3s;
-  width: 110px;
 }
 
 .footer__button:hover {
@@ -541,9 +548,23 @@ button {
 
 .footer__img-right,
 .footer__img-left {
+  position: absolute;
   display: block;
   width: 120px;
-  position: absolute;
+
+  animation: bell 3s infinite;
+}
+
+@keyframes bell {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
 }
 
 .footer__img-right {
@@ -557,6 +578,7 @@ button {
 }
 
 /* @@@@@@@@@@@@@@@@@@ scroll up @@@@@@@@@@@@@@@@@ */
+
 .scrollup {
   display: inline-flex;
   background-color: var(--container-color);
@@ -582,13 +604,52 @@ button {
 }
 
 /* @@@@@@@@@@@@@@@@@@ scroll bar @@@@@@@@@@@@@@@@@ */
+
 ::-webkit-scrollbar {
-  width: 0.5rem;
   background: hsl(355, 20%, 24%);
+  width: 0.5rem;
   border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(355, 40%, 24%);
+  background: hsl(355, 60%, 24%);
   border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(355, 80%, 24%);
+}
+
+/* @@@@@@@@@@@@@@@@@@ preloader @@@@@@@@@@@@@@@@@ */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(355, 20%, 12%, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+.preloader__img {
+  width: 100px;
+  height: 100px;
+  animation: preloader 3s infinite;
+}
+
+@keyframes preloader {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
 }
