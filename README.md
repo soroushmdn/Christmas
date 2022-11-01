@@ -4,7 +4,8 @@
 - Contains minimalist Preloader animation.
 - Developed first for Desktop then for Mobile devices.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
-- Contains Dark interface.
+- Contains Glassmorphism interface.
+- Contains slider in hero section
 
 
 
